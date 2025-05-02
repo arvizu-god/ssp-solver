@@ -1,11 +1,29 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "label": "Run Tests",
-        "type": "shell",
-        "command": "pytest -q",
-        "group": "test"
-      }
-    ]
-  }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Format (black)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\black .",
+      "group": "build"
+    },
+    {
+      "label": "Lint (flake8)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\flake8 src tests",
+      "group": "build"
+    },
+    {
+      "label": "Type-Check (mypy)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\mypy src",
+      "group": "build"
+    },
+    {
+      "label": "Test (pytest)",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\pytest --maxfail=1 --disable-warnings -q",
+      "group": "test"
+    }
+  ]
+}
