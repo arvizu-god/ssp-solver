@@ -35,13 +35,13 @@ class SubGate:
 
     def to_gate(self)-> Gate:
         ind=QuantumRegister(self.n_ind,name='i')
-        reg=QuantumRegister(self.n_sum,name='s')
-        qc=QuantumCircuit(ind,reg,name='Sub')
+        sum=QuantumRegister(self.n_sum,name='s')
+        qc=QuantumCircuit(ind,sum,name='Sub')
         mod=2**self.n_sum
 
         for k,a in enumerate(self.A):
             neg=(-a)%mod
             for j in range(self.n_sum):
                 phi=(2*np.pi*neg)/(2**(j+1))
-                qc.cp(phi,ind[k],reg[j])
+                qc.cp(phi,ind[k],sum[j])
         return qc.to_gate()
