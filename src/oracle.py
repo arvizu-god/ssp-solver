@@ -2,7 +2,7 @@ from qiskit import QuantumRegister, QuantumCircuit
 from qiskit.circuit import Gate
 from .problem import SSP
 
-class Oracle:
+class oracle:
     """
     Class that implements a X-H-MCX-H-X phase oracle on the sum register
     """
