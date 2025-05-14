@@ -1,10 +1,12 @@
   {
-    "python.defaultInterpreterPath": "C:/Users/Arturo Arvizu/Documents/CIC - IPN/msc-thesis/ssp-solver/.venv/Scripts/python.exe",
+    "python.defaultInterpreterPath": "./ssp-solver/.venv/Scripts/python.exe",
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": ["tests"]
+    "python.testing.pytestArgs": [
+      "tests"
+    ]
   }

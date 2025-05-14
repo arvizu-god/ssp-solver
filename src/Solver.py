@@ -1,13 +1,13 @@
 from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
-from .problem import SSP
-from .assembly import assembly
-from .grover import Grover
+from .Problem import SSP
+from .Assembly import Assembly
+from .Grover import Grover
 
 class sspsolver:
     def __init__(self, A, t, iterations:int):
         self.problem=SSP(A,t)
         self.iterations=iterations
-        self.assembly=assembly(self.problem)
+        self.assembly=Assembly(self.problem)
         self.grover=Grover(self.problem)
 
     def build(self)->QuantumCircuit:

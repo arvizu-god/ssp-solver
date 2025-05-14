@@ -1,7 +1,7 @@
 import numpy as np
 from qiskit import QuantumRegister, QuantumCircuit  
 from qiskit.circuit import Gate
-from .problem import SSP
+from .Problem import SSP
 
 class SumGate:
     """

@@ -12,18 +12,18 @@ Exposes:
 
 __version__ = "0.1.0"
 
-from .problem import SSP
-from .gates import SumGate, SubGate
-from .oracle import oracle
-from .assembly import assembly
-from .solver import sspsolver
-from .measure import measurements
+from .Problem import SSP
+from .Gates import SumGate, SubGate
+from .Oracle import oracle
+from .Assembly import assembly
+from .Solver import sspsolver
+from .Measure import measurements
 
 __all__ = [
     "SSP",
     "SumGate", "SubGate",
-    "oracle",
-    "assembly",
+    "Oracle",
+    "Assembly",
     "sspsolver",
     "measurements",
 ]

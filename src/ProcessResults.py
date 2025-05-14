@@ -1,9 +1,9 @@
-from .measure import measurements
-from .problem import SSP
-from .assembly import assembly
+from .Measure import Measurements
+from .Problem import SSP
+from .Assembly import Assembly
 
-class process_counts:
-    def __init__(self, counts:measurements,problem:SSP):
+class ProcessCounts:
+    def __init__(self, counts:Measurements,problem:SSP):
         self.counts=counts
         self.values=problem.A
         self.target_sum=problem.t
@@ -29,7 +29,7 @@ class process_counts:
 
         return answer_subsets
     
-    def circuit_stats(self,circuit:assembly):
-        self.circuit=assembly.circuit
+    def circuit_stats(self,circuit:Assembly):
+        self.circuit=Assembly.circuit
         cs_dict={'num_qubits':self.circuit.num_qubits,'num_clbits':self.circuit.num_clbits,'depth':self.circuit.depth(),'size':self.circuit.size(),'count_ops':self.circuit.count_ops()}
         return cs_dict

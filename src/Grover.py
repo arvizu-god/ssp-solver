@@ -1,6 +1,6 @@
 from qiskit import QuantumCircuit, QuantumRegister
 from qiskit.circuit import Gate
-from .problem import SSP
+from .Problem import SSP
 
 class Grover:
     def __init__(self,problem:SSP):

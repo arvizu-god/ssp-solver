@@ -1,10 +1,10 @@
 from qiskit import QuantumRegister, QuantumCircuit
 from qiskit.circuit.library import QFT
-from .problem import SSP
-from .gates import SumGate,SubGate
-from .oracle import Oracle
+from .Problem import SSP
+from .Gates import SumGate,SubGate
+from .Oracle import Oracle
 
-class assembly:
+class Assembly:
     def __init__(self,problem:SSP):
         self.problem=problem
         self.sum_gate=SumGate(problem).to_gate()
